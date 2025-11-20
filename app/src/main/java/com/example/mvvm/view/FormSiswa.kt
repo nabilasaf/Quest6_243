@@ -49,9 +49,9 @@ fun FormSiswa (modifier: Modifier,
               onSubmit:(MutableList<String>)-> Unit)
 {
     var textNama by remember { mutableStateOf(value = " ") }
-    var textAlamat by remember { mutableStateOf(value = " ") }
     var textGender by remember { mutableStateOf(value = " ") }
-    val listData: MutableList<String> = mutableListOf(textNama, textAlamat, textGender)
+    var textAlamat by remember { mutableStateOf(value = " ") }
+    val listData: MutableList<String> = mutableListOf(textNama,textGender, textAlamat)
 
     Scaffold (modifier = Modifier,
         {
