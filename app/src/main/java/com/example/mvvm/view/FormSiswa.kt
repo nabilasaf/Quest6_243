@@ -96,12 +96,20 @@ fun FormSiswa (modifier: Modifier,
                     }
                 }
             }
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(12.dp)
+                    .width(250.dp),
+                thickness = dimensionResource(id = R.dimen.thickness_divider),
+                color = Color.Blue
+            )
+
             OutlinedTextField(
                 value = textAlamat,
                 singleLine = true,
                 shape = MaterialTheme.shapes.medium,
                 modifier = Modifier.width(250.dp).padding(top=20.dp),
-                label = {Text(text = "Nama Lengkap")},
+                label = {Text(text = "Alamat")},
                 onValueChange = {textAlamat = it}
             )
             Spacer(modifier = Modifier.height(20.dp))
