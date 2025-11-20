@@ -1,5 +1,8 @@
 package com.example.mvvm.view
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -26,4 +29,9 @@ fun TampilSiswa(
     Scaffold(modifier = Modifier,
         {TopAppBar(
             title = {Text( stringResource(id = R.string.detail), color = Color.White)},
-            colors = TopAppBarDefaults.topAppBarColors(colorResource(id = R.color.purple_500))}) {}
+            colors = TopAppBarDefaults.topAppBarColors(colorResource(id = R.color.purple_500)))
+        }) { isiRuang ->
+        Column (modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.SpaceBetween){  }
+    }
+}
