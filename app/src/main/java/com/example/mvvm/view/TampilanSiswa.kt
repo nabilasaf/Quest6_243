@@ -1,6 +1,7 @@
 package com.example.mvvm.view
 
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.example.mvvm.model.Siswa
@@ -16,5 +17,5 @@ fun TampilSiswa(
         Pair(stringResource(id = R.string.gender), statusUiSiswa.gender),
         Pair(stringResource(id = R.string.alamat), statusUiSiswa.alamat),
     )
-
+    Scaffold() {  }
 }
