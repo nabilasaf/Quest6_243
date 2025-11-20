@@ -96,6 +96,14 @@ fun FormSiswa (modifier: Modifier,
                     }
                 }
             }
+            OutlinedTextField(
+                value = textAlamat,
+                singleLine = true,
+                shape = MaterialTheme.shapes.medium,
+                modifier = Modifier.width(250.dp).padding(top=20.dp),
+                label = {Text(text = "Nama Lengkap")},
+                onValueChange = {textAlamat = it}
+            )
 
         }
     }
