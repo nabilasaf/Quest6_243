@@ -59,5 +59,13 @@ fun FormSiswa (modifier: Modifier,
                 title = { Text(stringResource(id = R.string.app_name), color = Color.White) },
                 colors = TopAppBarDefaults.topAppBarColors(colorResource(id = R.color.purple_500))
             )
-        }) { }
+        }) { isiRuang ->
+        Column(
+            modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.SpaceBetween,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+
+        }
+    }
 }
