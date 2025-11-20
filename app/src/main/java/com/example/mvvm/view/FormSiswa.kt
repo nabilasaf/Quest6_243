@@ -52,4 +52,12 @@ fun FormSiswa (modifier: Modifier,
     var textAlamat by remember { mutableStateOf(value = " ") }
     var textGender by remember { mutableStateOf(value = " ") }
     val listData: MutableList<String> = mutableListOf(textNama, textAlamat, textGender)
+
+    Scaffold (modifier = Modifier,
+        {
+            TopAppBar(
+                title = { Text(stringResource(id = R.string.app_name), color = Color.White) },
+                colors = TopAppBarDefaults.topAppBarColors(colorResource(id = R.color.purple_500))
+            )
+        }) { }
 }
