@@ -73,6 +73,29 @@ fun FormSiswa (modifier: Modifier,
                 label = {Text(text = "Nama Lengkap")},
                 onValueChange = {textNama = it}
             )
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(12.dp)
+                    .width(250.dp),
+                thickness = dimensionResource(id = R.dimen.thickness_divider),
+                color = Color.Blue
+            )
+            Row {
+                pilihanJK.forEach { item ->
+                    Row (modifier = Modifier.selectable(
+                        selected = textGender == item,
+                        onClick = {textGender = item}
+                    ),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = textGender == item,
+                            onClick = { textGender = item }
+                        )
+                        Text(item)
+                    }
+                }
+            }
 
         }
     }
